@@ -80,7 +80,13 @@ project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
 
+// project.ext.vectoricons = [
+//     iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ]
+// ]
+
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -133,6 +139,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [
+            JPUSH_APPKEY: "yourAppKey",         //在此替换你的APPKey
+            JPUSH_CHANNEL: "yourChannel"        //在此替换你的channel
+        ]
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -179,6 +190,12 @@ android {
 }
 
 dependencies {
+    //
+    implementation 'com.android.support:multidex:1.0.3'
+    //
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
