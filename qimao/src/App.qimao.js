@@ -204,7 +204,7 @@ const AppTabNavigator = createBottomTabNavigator(
     ProfileBox: {
       screen: Profile,
       navigationOptions: () =>
-        bottomTabOptions('福利', {iconName: 'ios-person', typeName: 'ionicon'}),
+        bottomTabOptions('我的', {iconName: 'ios-person', typeName: 'ionicon'}),
     },
   },
   {
