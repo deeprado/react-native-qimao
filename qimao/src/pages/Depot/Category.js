@@ -18,7 +18,6 @@ const CateData = require('./Data/CategoryData.json');
 class Category extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
 
     this._flatList = null;
     this._sectionList = null;
