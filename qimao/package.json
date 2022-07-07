@@ -23,7 +23,7 @@
     "appcenter-crashes": "^3.0.0",
     "jcore-react-native": "^1.7.5",
     "jpush-react-native": "^2.7.5",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
